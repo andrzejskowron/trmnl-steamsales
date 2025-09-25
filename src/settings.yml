@@ -1,0 +1,21 @@
+---
+strategy: polling
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: ''
+polling_verb: get
+polling_url: 'https://store.steampowered.com/api/featuredcategories?cc={{country}}&l={{language}}'
+polling_headers: ''
+name: Steam Sales
+refresh_interval: 1440
+custom_fields:
+- keyname: country
+  field_type: string
+  name: Country
+  default: "pl"
+  help_text: "Lowercase ISO 3166-1 alpha-2 two-letter country code"
+- keyname: language
+  field_type: string
+  name: Language
+  default: "en"
+  help_text: "Lowercase two-letter language code"
